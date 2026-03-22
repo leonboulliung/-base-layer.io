@@ -1,0 +1,132 @@
+{
+  "theme": "light",
+  "design_philosophy": "Swiss & High-Contrast meets Old Money Tech. A B2B real-estate and tech fusion focused on operational clarity. Linear/Stripe inspired minimalism with rigorous bento-grid structures, zero lifestyle fluff, and high-fidelity CSS-based system mockups.",
+  "typography": {
+    "headings": {
+      "family": "Chivo",
+      "import_url": "https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap",
+      "classes": "font-sans tracking-tight text-slate-900",
+      "rules": "Never center by default. Left-aligned for clear structural hierarchy. Use tracking-tighter for massive hero text."
+    },
+    "body": {
+      "family": "Inter",
+      "import_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap",
+      "classes": "font-sans leading-relaxed text-slate-600",
+      "rules": "Use for all functional text, descriptions, and data points."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "import_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+      "classes": "font-mono text-sm tracking-widest uppercase",
+      "rules": "Use for overlines, labels, and system status indicators."
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": {
+      "default": "#F8FAFC",
+      "elevated": "#FFFFFF",
+      "subtle": "#F1F5F9"
+    },
+    "primary": {
+      "default": "#0F172A",
+      "hover": "#1E293B",
+      "foreground": "#FFFFFF"
+    },
+    "accent": {
+      "default": "#0052FF",
+      "hover": "#003ECC",
+      "subtle": "#EFF6FF"
+    },
+    "text": {
+      "heading": "#0F172A",
+      "body": "#334155",
+      "muted": "#64748B"
+    },
+    "border": {
+      "default": "#E2E8F0",
+      "subtle": "#F1F5F9",
+      "active": "#CBD5E1"
+    }
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      {
+        "name": "Glassmorphism Navbar",
+        "classes": "bg-white/70 backdrop-blur-xl border-b border-slate-200/50 shadow-sm",
+        "usage": "Sticky header/navigation."
+      },
+      {
+        "name": "The Grid Canvas",
+        "classes": "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]",
+        "usage": "Use as a subtle background pattern for the Hero and FAQ sections to enforce the 'system/operational' feel."
+      },
+      {
+        "name": "Bento Cards",
+        "classes": "bg-white border border-slate-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-md transition-shadow duration-300",
+        "usage": "Use for 'Impact', 'Solution', and 'How it works' grid items."
+      }
+    ],
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(15, 23, 42, 0.05)",
+      "md": "0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05)",
+      "lg": "0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.05)"
+    }
+  },
+  "layouts": {
+    "spacing": {
+      "section_padding": "py-24 md:py-32",
+      "container": "max-w-7xl mx-auto px-6 md:px-8",
+      "bento_gap": "gap-6 md:gap-8"
+    },
+    "patterns": {
+      "hero": "2-column layout on desktop: Left side massive typography and CTA, Right side isometric or floating CSS-based dashboard mockup.",
+      "bento_grid": "Asymmetric grid (e.g., 1x large horizontal card, 2x vertical cards) to map 'Solution' features.",
+      "faq": "Narrow single-column centered layout (max-w-3xl) for high readability."
+    }
+  },
+  "motion": {
+    "libraries": ["framer-motion"],
+    "rules": [
+      "Use subtle fade-up animations for text block reveals (`y: 20, opacity: 0` to `y: 0, opacity: 1`).",
+      "Stagger children in grid layouts.",
+      "Add micro-interactions to buttons (`whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}`).",
+      "No wild bouncing or spinning. Keep it clinical and professional."
+    ]
+  },
+  "media": {
+    "strategy": "NO LIFESTYLE STOCK PHOTOS. Zero. Use CSS, SVG, and Phosphor icons to build abstract 'dashboard mockups' (skeletons, charts, metrics, data tables) that look like a highly advanced coliving management OS.",
+    "icons_library": "@phosphor-icons/react",
+    "image_urls": []
+  },
+  "components": {
+    "navigation": "Sticky, glassmorphic top bar with Logo (text 'BaseLayer') on left, CTA ('Book Demo') on right.",
+    "hero": "H1: 'Reduce friction. Control cost per unit.' Subtext: 'A simple operational layer between you and your residents.' CTA: 'Book a Demo'. Right visual: Abstract UI mockup of a resident coordination dashboard built with HTML/Tailwind.",
+    "problem_section": "Bento grid detailing 'Small frictions add up' - maintenance requests, lost keys, WhatsApp chaos.",
+    "impact_section": "High-contrast dark section (bg-slate-900 text-white) to emphasize business impact ('And they directly impact your business').",
+    "solution_section": "Feature grid showing the platform capabilities.",
+    "how_it_works": "4-step vertical timeline or horizontal cards showing the operator process.",
+    "calendly_cta": "A dedicated section at the bottom embedding Calendly via iframe (`https://calendly.com/leon-boulliung-grabitautomaten/leon-call`) wrapped in a clean container."
+  },
+  "instructions_to_main_agent": [
+    "You are building a B2B SaaS landing page in React using pure JS (.js/.jsx), NOT TypeScript. Do not create .tsx files.",
+    "Install and use 'framer-motion' for scroll reveals and layout animations.",
+    "Install and use '@phosphor-icons/react' for all iconography.",
+    "Do not use external images for mockups. Build a 'fake dashboard' using div blocks, borders, subtle shadows, and skeleton-like loaders to represent the BaseLayer app in the Hero section.",
+    "Embed the Calendly link `https://calendly.com/leon-boulliung-grabitautomaten/leon-call` in the final CTA section using an iframe or react-calendly.",
+    "Use standard Tailwind CSS classes. Extend the tailwind config with the fonts (Chivo and Inter) and custom colors.",
+    "Include 'data-testid' on all interactive elements (buttons, form inputs, accordion triggers)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Always use JS (.js or .jsx) instead of TSX as requested by the user.",
+    "Avoid generic centered layouts except for the FAQ section.",
+    "Create depth through layered design elements with z-index hierarchy and soft box-shadows.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "DO NOT apply universal transition (`transition: all`). Add transitions for specific interactive elements.",
+    "DO NOT center align the app container. No `.App { text-align: center; }`.",
+    "Use modern pill-shaped or sharp buttons with interaction animations.",
+    "NEVER use emojis for icons. Use the specified icon library (@phosphor-icons/react).",
+    "Add generous spacing (py-24 or py-32) to let the sections breathe.",
+    "DO NOT use a transparent background in the header if content scrolls under it; use glassmorphism."
+  ]
+}
