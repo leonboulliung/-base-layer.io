@@ -16,7 +16,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen pt-20 md:pt-24 pb-16 md:pb-24 grid-pattern overflow-hidden">
+    <section id="hero" className="relative min-h-screen pt-20 md:pt-24 pb-16 md:pb-24 grid-pattern overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-120px)]">
           {/* Left Content */}
