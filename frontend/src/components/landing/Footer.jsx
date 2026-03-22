@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="py-12 bg-slate-950">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Top Row - Logo and Links */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
@@ -38,10 +37,24 @@ export const Footer = () => {
               leon@base-layer.io
             </a>
           </div>
+        </div>
 
-          {/* Copyright */}
-          <p className="text-sm text-slate-500">
-            &copy; {currentYear} BaseLayer. All rights reserved.
+        {/* Legal Text */}
+        <div className="pt-8 space-y-4 text-xs text-slate-500 leading-relaxed">
+          <p>
+            © 2026 BaseLayer – a product by BOULLIUNG SASU, 60 rue François 1er, 75008 Paris, France
+          </p>
+          <p>
+            BaseLayer is an early-stage software product providing operational tools for shared living and coliving operators.
+          </p>
+          <p>
+            This website is for informational purposes only and does not constitute a binding offer. Any services are subject to individual agreement.
+          </p>
+          <p>
+            We respect your privacy. Personal data submitted through this website (e.g. via contact forms) will only be used to respond to your inquiry and will not be shared with third parties.
+          </p>
+          <p>
+            This website may use essential cookies required for technical functionality.
           </p>
         </div>
       </div>
