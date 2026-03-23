@@ -41,7 +41,7 @@ export const ResidentExperienceSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+            className="relative pb-16"
           >
             {/* Main image */}
             <div className="rounded-2xl overflow-hidden shadow-lg">
@@ -52,8 +52,8 @@ export const ResidentExperienceSection = () => {
               />
             </div>
             
-            {/* Floating friction cards */}
-            <div className="absolute -bottom-6 -left-6 right-6 space-y-3">
+            {/* Floating friction cards - repositioned */}
+            <div className="absolute -bottom-4 left-4 right-4 md:left-6 md:right-6">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -61,46 +61,21 @@ export const ResidentExperienceSection = () => {
                 transition={{ duration: 0.4, delay: 0.4 }}
                 className="bg-white rounded-xl border border-slate-200 p-4 shadow-lg"
               >
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Warning size={16} className="text-amber-600" />
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Warning size={20} className="text-red-500" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <p className="text-sm font-medium text-slate-900">
-                        Kitchen not cleaned
-                      </p>
-                      <span className="text-xs text-slate-500">2h ago</span>
-                    </div>
-                    <p className="text-xs text-slate-500">
-                      "Whose turn was it today?"
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-slate-900">
+                      3 unresolved issues this week
+                    </p>
+                    <p className="text-xs text-slate-500 truncate">
+                      Kitchen cleaning • Trash • Common area dispute
                     </p>
                   </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5 }}
-                className="bg-white rounded-xl border border-slate-200 p-4 shadow-lg ml-8"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Warning size={16} className="text-red-600" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <p className="text-sm font-medium text-slate-900">
-                        Trash not taken out
-                      </p>
-                      <span className="text-xs text-slate-500">5h ago</span>
-                    </div>
-                    <p className="text-xs text-slate-500">
-                      "I thought someone else would do it"
-                    </p>
-                  </div>
+                  <span className="text-xs text-red-500 font-medium whitespace-nowrap">
+                    Needs attention
+                  </span>
                 </div>
               </motion.div>
             </div>

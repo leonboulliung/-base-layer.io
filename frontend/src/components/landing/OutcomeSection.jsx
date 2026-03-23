@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Check } from "@phosphor-icons/react";
 
-// Real photo of people working together
-const TEAM_IMAGE = "https://images.unsplash.com/photo-1631038506857-6c970dd9ba02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwyfHxjb3dvcmtpbmclMjBsb3VuZ2UlMjBwZW9wbGUlMjB3b3JraW5nJTIwdG9nZXRoZXJ8ZW58MHx8fHwxNzc0MjgzMTc5fDA&ixlib=rb-4.1.0&q=85";
+// Modern building architecture image - represents property management
+const RESULTS_IMAGE = "https://images.pexels.com/photos/3592799/pexels-photo-3592799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const outcomes = [
   "Less friction in the resident experience",
@@ -65,8 +65,8 @@ export const OutcomeSection = () => {
             {/* Image above metrics */}
             <div className="mb-6 rounded-2xl overflow-hidden shadow-lg">
               <img 
-                src={TEAM_IMAGE} 
-                alt="Team collaborating in modern workspace" 
+                src={RESULTS_IMAGE} 
+                alt="Modern property architecture representing structured operations" 
                 className="w-full h-48 object-cover"
               />
             </div>
