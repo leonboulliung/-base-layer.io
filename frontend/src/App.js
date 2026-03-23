@@ -4,6 +4,7 @@ import { HeroSection } from "./components/landing/HeroSection";
 import { ProblemSection } from "./components/landing/ProblemSection";
 import { ImpactSection } from "./components/landing/ImpactSection";
 import { ResidentExperienceSection } from "./components/landing/ResidentExperienceSection";
+import { BeforeAfterSection } from "./components/landing/BeforeAfterSection";
 import { SolutionSection } from "./components/landing/SolutionSection";
 import { HowItWorksSection } from "./components/landing/HowItWorksSection";
 import { OutcomeSection } from "./components/landing/OutcomeSection";
@@ -20,6 +21,7 @@ function App() {
         <ProblemSection />
         <ImpactSection />
         <ResidentExperienceSection />
+        <BeforeAfterSection />
         <SolutionSection />
         <HowItWorksSection />
         <OutcomeSection />

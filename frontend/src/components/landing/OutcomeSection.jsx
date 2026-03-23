@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Check } from "@phosphor-icons/react";
 
+// Real photo of people working together
+const TEAM_IMAGE = "https://images.unsplash.com/photo-1631038506857-6c970dd9ba02?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwyfHxjb3dvcmtpbmclMjBsb3VuZ2UlMjBwZW9wbGUlMjB3b3JraW5nJTIwdG9nZXRoZXJ8ZW58MHx8fHwxNzc0MjgzMTc5fDA&ixlib=rb-4.1.0&q=85";
+
 const outcomes = [
   "Less friction in the resident experience",
   "Lower operational workload",
@@ -59,6 +62,14 @@ export const OutcomeSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            {/* Image above metrics */}
+            <div className="mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src={TEAM_IMAGE} 
+                alt="Team collaborating in modern workspace" 
+                className="w-full h-48 object-cover"
+              />
+            </div>
             <div className="bg-white rounded-2xl border border-slate-200 shadow-lg p-8">
               <p className="font-mono text-xs text-slate-500 uppercase tracking-wider mb-6">
                 Average results after 3 months

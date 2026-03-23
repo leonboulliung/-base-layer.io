@@ -7,6 +7,9 @@ import {
   ChartLineUp,
 } from "@phosphor-icons/react";
 
+// Real photo of modern apartment building
+const BUILDING_IMAGE = "https://images.pexels.com/photos/36294220/pexels-photo-36294220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+
 export const HeroSection = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -61,14 +64,22 @@ export const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Right - Dashboard Mockup */}
+          {/* Right - Dashboard Mockup with Background Image */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="dashboard-mockup rounded-2xl p-6 shadow-lg">
+            {/* Background building image */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden opacity-20">
+              <img 
+                src={BUILDING_IMAGE} 
+                alt="Modern apartment building" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="dashboard-mockup rounded-2xl p-6 shadow-lg relative z-10">
               {/* Dashboard Header */}
               <div className="flex items-center justify-between mb-6">
                 <div>
