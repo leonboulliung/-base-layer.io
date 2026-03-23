@@ -5,6 +5,7 @@ import { ProblemSection } from "./components/landing/ProblemSection";
 import { ImpactSection } from "./components/landing/ImpactSection";
 import { ResidentExperienceSection } from "./components/landing/ResidentExperienceSection";
 import { BeforeAfterSection } from "./components/landing/BeforeAfterSection";
+import { TestimonialsSection } from "./components/landing/TestimonialsSection";
 import { SolutionSection } from "./components/landing/SolutionSection";
 import { HowItWorksSection } from "./components/landing/HowItWorksSection";
 import { OutcomeSection } from "./components/landing/OutcomeSection";
@@ -22,6 +23,7 @@ function App() {
         <ImpactSection />
         <ResidentExperienceSection />
         <BeforeAfterSection />
+        <TestimonialsSection />
         <SolutionSection />
         <HowItWorksSection />
         <OutcomeSection />

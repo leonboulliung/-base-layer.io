@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "@phosphor-icons/react";
 
-// Placeholder images - will be replaced with actual before/after images
-const BEFORE_IMAGE = "https://images.pexels.com/photos/3926542/pexels-photo-3926542.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
-const AFTER_IMAGE = "https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+// Real before/after images from BaseLayer
+const BEFORE_IMAGE = "https://live.staticflickr.com/65535/55164360578_29c6bcfef2.jpg";
+const AFTER_IMAGE = "https://live.staticflickr.com/65535/55164197936_fddfbe351a.jpg";
 
 export const BeforeAfterSection = () => {
   return (
@@ -28,7 +27,7 @@ export const BeforeAfterSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Before */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -38,15 +37,15 @@ export const BeforeAfterSection = () => {
             className="relative"
           >
             <div className="absolute -top-3 left-4 z-10">
-              <span className="inline-block bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-block bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 Before BaseLayer
               </span>
             </div>
-            <div className="rounded-2xl overflow-hidden border-2 border-red-200 shadow-lg">
+            <div className="rounded-2xl overflow-hidden border-2 border-red-200 shadow-lg bg-slate-100">
               <img
                 src={BEFORE_IMAGE}
                 alt="Shared kitchen without clear responsibilities - messy and disorganized"
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-[400px] md:h-[480px] object-cover object-center"
                 data-testid="before-image"
               />
             </div>
@@ -62,13 +61,6 @@ export const BeforeAfterSection = () => {
             </div>
           </motion.div>
 
-          {/* Arrow indicator for desktop */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-20">
-            <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center">
-              <ArrowRight size={24} className="text-white" />
-            </div>
-          </div>
-
           {/* After */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -78,15 +70,15 @@ export const BeforeAfterSection = () => {
             className="relative"
           >
             <div className="absolute -top-3 left-4 z-10">
-              <span className="inline-block bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="inline-block bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 After BaseLayer
               </span>
             </div>
-            <div className="rounded-2xl overflow-hidden border-2 border-emerald-200 shadow-lg">
+            <div className="rounded-2xl overflow-hidden border-2 border-emerald-200 shadow-lg bg-slate-100">
               <img
                 src={AFTER_IMAGE}
                 alt="Shared kitchen with clear responsibilities - clean and organized"
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-[400px] md:h-[480px] object-cover object-center"
                 data-testid="after-image"
               />
             </div>
